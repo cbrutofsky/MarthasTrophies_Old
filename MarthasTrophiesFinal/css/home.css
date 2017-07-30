@@ -1,5 +1,5 @@
 html, body, ul{
-    background-image: url(/Images/005-wood-grain.png)
+    background-image: url(/MarthasTrophies/MarthasTrophiesFinal/images/005-wood-grain.png);
 }
 h1{
     font-family: 'Tangerine', cursive;
@@ -89,7 +89,7 @@ li.dropdown {
   cursor: pointer;
 }
 body {
-  background-image: url(/images/005-wood-grain.png);
+  background-image: url(/MarthasTrophies/MarthasTrophiesFinal/images/005-wood-grain.png);
 }
 .wrap {
   width: 980px; /* fixed width, centered in viewport */
