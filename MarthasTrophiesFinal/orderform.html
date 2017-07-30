@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Form</title>
+    <link rel="stylesheet" type="text/css" href="/CSS/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/CSS/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    <script src="/jquery-3.2.1.js"></script>
+    <script> 
+        $(function(){
+          $("#header").load("header.html");
+          $("#footer").load("footer.html");
+        });
+    </script>
+    <script>/*This script toggles the type checkbox to show and hide what else is underneath it*/
+    $(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+        var inputValue = $(this).attr("value");
+        $("." + inputValue).toggle();
+        });
+    });
+ 
+    </script>
+    <!--<script> /*This script sends the form to email*/
+    $(document).ready(function(){
+        $('#order-form').submit(function(e){
+           $.ajax({
+                method: 'POST',
+                url: "https://formspree.io/tnblasing@gmail.com",
+                data: $('#order-form').serialize(),
+                datatype: 'json'
+           });
+            $(this).get(0).reset(); /*Resets the form to blank once it is submitted*/
+        });
+    });
+    </script>--><!--Uncomment this script to make the form send to an email-->
+</head>
+<body>
+    <div id="header">
+
+    </div>
+    <div>
+        <br>
+        <h2>Order Form</h2>
+       
+        <br>
+        <form id="order-form" method="post" style="border:1px solid #ccc">
+            <div class="container">
+                First Name:<br>
+                <input type="text" name="firstname"><br>
+                Last Name:<br>
+                <input type="text" name="lastname"><br>
+                Email:<br>
+                <input type="email"><br>
+                Phone Number:<br>
+                <input type="tel"><br>
+                Street Address:<br>
+                <input type="text"><br>
+                City:<br>
+                <input><br>
+                State/Province:<br>
+                <select>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                    <option value="AS">American Samoa</option>
+                    <option value="GU">Guam</option>
+                    <option value="MP">Northern Mariana Islands</option>
+                    <option value="PR">Puerto Rico</option>
+                    <option value="UM">United States Minor Outlying Islands</option>
+                    <option value="VI">Virgin Islands</option>
+                    <option value="AA">Armed Forces Americas</option>
+                    <option value="AP">Armed Forces Pacific</option>
+                    <option value="AE">Armed Forces Others</option>		
+                </select><br>
+                Postal/Zip Code:<br>
+                <input><br>
+                <legend>Select the product you would like to purchase:</legend>
+                <fieldset>
+                    <label for="trophy">Trophy</label>
+                    <input type="checkbox" name="category" value="trophy" id="trophy">
+                    <div class="trophy" style="display:none">
+                        <!--If Trophy is clicked, they will need to answer how many orders are needed-->
+                        <label for="orders">How many orders do you want?</label>
+                        <input min="1" type="number" id="orders" name="orders" value="1"/>
+                        <button action="order.php">Enter</button>
+                        <div>
+                        </div>
+                        <p>Order Number ...</p>
+                        <label for="item">Item Number</label>
+                        <input type="text" id="item" name="item"><br>
+                        <label for="quantity">Quantity</label>
+                        <input min="1" type="number" id="quantity" name="quantity" value="1"/>
+                        <label for="engraving">Text for Engraving</label>
+                        <input type="text" id="engraving" name="engraving">
+                        <label for="comments">Extra Comments or Changes</label>
+                        <input type="text" id="comments" name="comments">
+                        <label for="date">Pickup Date</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <label for="plaque">Plaque</label>
+                    <input type="checkbox" name="category" value="plaque" id="plaque">
+                    <div class="plaque" style="display:none">
+                        <!--If Plaque is clicked, they will need to answer how many orders are needed-->
+                        <label for="orders">How many different plaques would you like?</label>
+                        <input min="1" type="number" id="orders" name="orders" value="1"/>
+                        <button>Enter</button>
+                        <div>
+                        </div>
+                        <p>Order Number ...</p>
+                        <label for="item">Item Number</label>
+                        <input type="text" id="item" name="item"><br>
+                        <label for="quantity">Quantity</label>
+                        <input min="1" type="number" id="quantity" name="quantity" value="1"/>
+                        <label for="engraving">Text for Engraving</label>
+                        <input type="text" id="engraving" name="engraving">
+                        <label for="comments">Extra Comments or Changes</label>
+                        <input type="text" id="comments" name="comments">
+                        <label for="date">Pickup Date</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <label for="misc">Miscellaneous</label>
+                    <input type="checkbox" name="category" value="misc" id="misc">
+                    <div class="misc" style="display:none">
+                        <!--If Misc. is clicked, they will need to answer how many different items are needed-->
+                        <label for="orders">How many different items would you like?</label>
+                        <input min="1" type="number" id="orders" name="orders" value="1"/>
+                        <button>Enter</button>
+                        <div>
+                        </div>
+                        <p>Order Number ...</p>
+                        <label for="item">Item Number</label>
+                        <input type="text" id="item" name="item"><br>
+                        <label for="quantity">Quantity</label>
+                        <input min="1" type="number" id="quantity" name="quantity" value="1"/>
+                        <label for="engraving">Text for Engraving</label>
+                        <input type="text" id="engraving" name="engraving">
+                        <label for="comments">Extra Comments or Changes</label>
+                        <input type="text" id="comments" name="comments">
+                        <label for="date">Pickup Date</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                </fieldset>
+                <!--
+                Choose a Category:<br>
+                <select>
+                    <option>Trophy</option>
+                    <option>Plaque</option>
+                    <option>Miscellaneous</option>
+                </select><br>
+                Item Number<br>
+                <input type="text"><br>
+                Quantity<br>
+                <input type="text"><br>
+                Text for Engraving:<br>
+                <input type="text"><br>
+                Pickup Date:<br>
+                <input type="text"><br>
+                Extra Comments or Changes in Design:<br>
+                <input type="text"><br><br>
+                <input type="submit" value="Submit"><br><br>-->
+                For any other ordering information, please call 770-460-9951 or e-mail us at marthastrophies@bellsouth.net
+            </div>
+            
+            
+        </form>
+    </div>
+    <div id="footer">
+
+    </div>
+    
+    
+    
+</body>
+</html>

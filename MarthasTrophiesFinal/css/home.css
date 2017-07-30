@@ -1,0 +1,144 @@
+html, body, ul{
+    background-image: url(/Images/005-wood-grain.png)
+}
+h1{
+    font-family: 'Tangerine', cursive;
+    font-size: 60px;
+    text-shadow: 1px 1px 5px #8B8B8B;
+}
+div.centertext, h2{
+    text-align: center;
+}
+p.alignleft{
+    float: left;
+}
+p.alignright{
+    float: right;
+}
+div.border{
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-top: 1px;
+    border-top-style: solid;
+}
+div.topborder{
+    border-top: 1px;
+    border-top-style: solid;
+}
+div.center{
+    text-align: center;
+}
+body.footer{
+    position:fixed;
+    bottom:0;
+}
+div#nav{
+    text-align: center;
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+li {
+    float: left;
+}
+
+/*Below are the dropdown css attributes*/
+li a, .dropbtn {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: gray;
+}
+li.dropdown {
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: cadetblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Below are the attributes for the carousel*/
+#showcase .cloud9-item, #buttons button {
+  cursor: pointer;
+}
+body {
+  background-image: url(/images/005-wood-grain.png);
+}
+.wrap {
+  width: 980px; /* fixed width, centered in viewport */
+  left: -490px;
+  margin-left: 50%;
+  position: relative;
+}
+#showcase img {
+  cursor: pointer;
+}
+footer {
+  display: block;
+  position: relative;
+}
+#showcase {
+      height: 600px;
+      box-shadow: 0px 0px 13px 5px #8B8B8B; /*#41AFD3*/
+      border-radius: 8px;
+}
+#item-title {
+      color: #000000;
+      font-size: 29px;
+      letter-spacing: 0.13em;
+      text-shadow: 1px 1px 6px #8B8B8B;
+      text-align: center;
+      margin-bottom: 22px;
+}
+#buttons {
+      text-align: center;
+}
+#buttons > button {
+      width: 64px;
+      height: 36px;
+      color: #666;
+      font: bold 16px arial;
+      text-align: center;
+      margin: 5px;
+      background: #f6f6f6;
+      border: solid 2px rgba(0, 0, 0, 0.4);
+      border-radius: 5px;
+      cursor: pointer;
+}
+#buttons > button:active,
+#buttons > button.down {
+      background: #dfdfdf;
+      border: solid 2px rgba(0, 0, 0, 0.6);
+      box-shadow: none;
+}
+/*For the Orderform padding*/
+.container {
+    padding: 16px;
+}

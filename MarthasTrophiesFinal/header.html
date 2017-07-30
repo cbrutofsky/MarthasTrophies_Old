@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Header</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/CSS/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/CSS/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    <script src="/jquery-3.2.1.js"></script>
+    <script> 
+    $(function(){
+      $("#header").load("header.html");
+      $("#footer").load("footer.html"); 
+    });
+    </script> 
+<style>
+
+</style>
+</head>
+<body>
+    <div class="centertext">
+        <h1>Martha's Trophies and Plaques</h1>
+        <p style="font-size:18px">Established in 1996</p>
+    </div>
+    <div>
+        <p class="alignleft">Phone number: 770-460-9951</p>
+        <p class="alignright">Email: marthastrophies@bellsouth.net</p>            
+        <br>
+        <br>
+    </div>
+    <div id="nav" class="border">
+        <nav id="centeredmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#Trophies" class="dropbtn">Trophies</a>
+                    <div class="dropdown-content">
+                        <a href="baseball.html">Baseball</a>
+                        <a href="#">Soccer</a>
+                        <a href="#">Basketball</a>
+                        <a href="#">Football</a>
+                        <a href="#">Cheerleading</a>
+                        <a href="#">Lacrosse</a>
+                        <a href="#">Other Sports</a>
+                        <a href="#">Education</a>
+                        <a href="#">Miscellaneous</a>
+                    </div>
+                </li>
+                        
+                 <li class="dropdown">
+                    <a href="#Plaques" class="dropbtn">Plaques</a>
+                    <div class="dropdown-content">
+                        <a href="#">Wood</a>
+                        <a href="#">Acrylics</a>
+                        <a href="#">Business Awards</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#GiftItems" class="dropbtn">Gift Items</a>
+                    <div class="dropdown-content">
+                        <a href="#">Cups</a>
+                        <a href="#">Leather Products</a>
+                        <a href="#">Miscellaneous</a>
+                        <a href="#">Wood Products</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#Orders" class="dropbtn">Orders</a>
+                    <div class="dropdown-content">
+                        <a href="orderform.html">Order Form</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
