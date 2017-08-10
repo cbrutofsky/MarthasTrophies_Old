@@ -3,6 +3,7 @@
 <head>
     <title>Header</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/MarthasTrophies/MarthasTrophiesFinal/css/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css">
     <link rel="stylesheet" href="/MarthasTrophies/MarthasTrophiesFinal//css/home.css">
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
@@ -28,12 +29,12 @@
         <br>
         <br>
     </div>
-    <div id="nav" class="border">
+    <!--<div id="nav" class="border">
         <nav id="centeredmenu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#Trophies" class="dropbtn">Trophies</a>
+                    <a class="dropbtn">Trophies</a>
                     <div class="dropdown-content">
                         <a href="baseball.html">Baseball</a>
                         <a href="#">Soccer</a>
@@ -48,7 +49,7 @@
                 </li>
                         
                  <li class="dropdown">
-                    <a href="#Plaques" class="dropbtn">Plaques</a>
+                    <a class="dropbtn">Plaques</a>
                     <div class="dropdown-content">
                         <a href="#">Wood</a>
                         <a href="#">Acrylics</a>
@@ -56,7 +57,7 @@
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#GiftItems" class="dropbtn">Gift Items</a>
+                    <a class="dropbtn">Gift Items</a>
                     <div class="dropdown-content">
                         <a href="#">Cups</a>
                         <a href="#">Leather Products</a>
@@ -64,15 +65,47 @@
                         <a href="#">Wood Products</a>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a href="#Orders" class="dropbtn">Orders</a>
-                    <div class="dropdown-content">
-                        <a href="orderform.html">Order Form</a>
-                        <a href="#">Contact Us</a>
-                    </div>
+                <li><a href="orderform.html">Orders</a></li>
+            </ul>
+        </nav>
+    </div>-->
+    <div class="menu-wrap">
+        <nav class="menu">
+            <ul class="clearfix">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Trophies <span class="arrow">&#9660;</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="baseball.html">Baseball</a></li>
+                        <li><a href="#">Soccer</a></li>
+                        <li><a href="#">Basketball</a></li>
+                        <li><a href="#">Football</a></li>
+                        <li><a href="#">Cheerleading</a></li>
+                        <li><a href="#">Other Sports</a></li>
+                        <li><a href="#">Miscellaneous</a></li>
+                    </ul>
                 </li>
+                <li>
+                    <a href="#">Plaques <span class="arrow">&#9660;</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Acrylics</a></li>
+                        <li><a href="#">Wood</a></li>
+                        <li><a href="#">Business Awards</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Gift Items <span class="arrow">&#9660;</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Cups</a></li>
+                        <li><a href="#">Leather Products</a></li>
+                        <li><a href="#">Miscellaneous</a></li>
+                        <li><a href="#">Wood Products</a></li>
+                    </ul>
+                </li>
+                <li><a href="orderform.html">Orders</a></li>
             </ul>
         </nav>
     </div>
+    
 </body>
 </html>
